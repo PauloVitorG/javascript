@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine System</title>
+</head>
+<body>
+    <h1>Fine System</h1>
+    Vehicle speed: <input type="number" name="txtvel" id="txtvel"> 
+    <input type="button" value="check" id="check">
+    <div id="res"></div>
+    <script>
+        var checking = window.document.querySelector('input#check')
+        
+        var res = window.document.querySelector('div#res')
+        checking.addEventListener('click', check)
+        function check() {
+            var txtvel = Number(document.querySelector('input#txtvel').value)
+            res.innerHTML = `<p>Your speed is <strong>${txtvel}Km/h</strong></p>`
+            if(txtvel <= 60) {
+                
+                res.innerHTML += `<p>Aways drive wearing the seat belt</p>`
+            } else {
+                res.innerHTML += "<p>YOU ARE OVERSPEEDING. <strong>FINED!</p></strong>"
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

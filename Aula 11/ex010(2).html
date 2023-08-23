@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionality</title>
+</head>
+<body>
+    <h1>Nacionality</h1>
+    Country: <input type="text" name="txtna" id="txtna"> 
+    <input type="button" value="check" id="check">
+    <div id="res"></div>
+    <script>
+        var checking = window.document.querySelector('input#check')
+        
+        var res = window.document.querySelector('div#res')
+        checking.addEventListener('click', check)
+        function check() {
+            var txtna = document.querySelector('input#txtna').value
+
+            res.innerHTML = `<p>You live in <strong>${txtna}</strong></p>`
+            if(txtna == 'Brazil' || txtna == "Brasil" || txtna == 'brazil' || txtna == "brasil") {
+                res.innerHTML += "<p>You are Brazillian</p>"
+            } else {
+                res.innerHTML += `<p>You are foreigner</p>`
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
